@@ -1,0 +1,35 @@
+data:
+  data_dir: ../data
+  data_file: data.pkl
+  processed_data_file: processed_data.pkl
+  processed_test_file: processed_test.pkl
+  test_file: test.pkl
+logging:
+  eval_steps: 100
+  log_dir: ../logs
+  logging_steps: 50
+  random_seed: 42
+  save_steps: 200
+model_params:
+  bert_model_name: bert-base-uncased
+  dropout_rate: 0.2
+  embedding_dim: 128
+  feature_fusion_hidden_dims:
+  - 128
+  - 64
+  nhead: 4
+  num_item_ids: 75
+  num_layers: 2
+  num_value_with_units: 14454
+models:
+  bert_model_name: bert-base-uncased
+training:
+  batch_size: 8
+  gradient_clip: 1.0
+  learning_rate: 5e-6
+  num_epochs: 15
+  optimizer: adam
+  optimizer_params:
+    gamma: 0.1
+    step_size: 5
+    weight_decay: 1e-5
